@@ -1174,6 +1174,7 @@ GameObject:
   - component: {fileID: 657849152}
   - component: {fileID: 657849151}
   - component: {fileID: 657849154}
+  - component: {fileID: 657849155}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -1344,6 +1345,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 657849150}
+--- !u!114 &657849155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657849148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b73c364fd5fe6d45b8235b01805c2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rayInteractor: {fileID: 583822186}
+  _teleportationProvider: {fileID: 657849154}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

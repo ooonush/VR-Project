@@ -1,70 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class TeleportChecker : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset actionAssets;
-    [SerializeField] private XRRayInteractor rayInteractor;
-    [SerializeField] private TeleportationProvider provider;
-    private InputAction stick;
-    private bool activated;
+    [SerializeField] private XRRayInteractor _rayInteractor;
+    [SerializeField] private TeleportationProvider _teleportationProvider;
+    private InputAction _leftHandMoveStick;
+    private bool _activated;
 
-    // Start is called before the first frame update
-    void Start()
+    private XRIDefaultInputActions _inputActions;
+    
+    private void Start()
     {
-        rayInteractor.enabled = false;
-
-        var activate = actionAssets.FindActionMap("XRI LeftHand Locomotion").FindAction("Teleport Mode Activate");
-        activate.Enable();
-        activate.performed += OnTeleportActivate;
-
-        var cancel = actionAssets.FindActionMap("XRI LeftHand Locomotion").FindAction("Teleport Mode Cancel");
-        cancel.Enable();
-        cancel.performed += OnTeleportcancel;
-
-        stick = actionAssets.FindActionMap("XRI LeftHand Locomotion").FindAction("Move");
-        stick.Enable();
+        _inputActions = new XRIDefaultInputActions();
+        _inputActions.Enable();
+        _rayInteractor.enabled = false;
+        
+        _inputActions.XRILeftHandLocomotion.TeleportModeActivate.performed += OnTeleportActivate;
+        _inputActions.XRILeftHandLocomotion.TeleportModeCancel.performed += OnTeleportCancel;
+        _leftHandMoveStick = _inputActions.XRILeftHandLocomotion.Move;
     }
-
-    // Update is called once per frame
-    [System.Obsolete]
-    void Update()
+    
+    private void Update()
     {
-        if (!activated)
+        if (!_activated || _leftHandMoveStick.triggered)
         {
             return;
         }
 
-        if (stick.triggered)
+        if (!_rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
+            DisableRayInteractor();
             return;
         }
 
-        if (!rayInteractor.GetCurrentRaycastHit(out RaycastHit hit))
-        {
-            rayInteractor.enabled = false;
-            activated = false;
-            return;
-        }
-
-        TeleportRequest request = new TeleportRequest()
+        var request = new TeleportRequest
         {
             destinationPosition = hit.point,
         };
-        provider.QueueTeleportRequest(request);
+        _teleportationProvider.QueueTeleportRequest(request);
     }
-
+    
     private void OnTeleportActivate(InputAction.CallbackContext context)
     {
-        rayInteractor.enabled = true;
-        activated = true;
+        EnableRayInteractor();
     }
-    private void OnTeleportcancel(InputAction.CallbackContext context)
+
+    private void OnTeleportCancel(InputAction.CallbackContext context)
     {
-        rayInteractor.enabled = false;
-        activated = false;
+        DisableRayInteractor();
+    }
+
+    private void EnableRayInteractor()
+    {
+        _rayInteractor.enabled = true;
+        _activated = true;
+    }
+
+    private void DisableRayInteractor()
+    {
+        _rayInteractor.enabled = false;
+        _activated = false;
     }
 }

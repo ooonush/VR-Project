@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-namespace Gameplay
+namespace Gameplay.GameplayObjects.Inventory
 {
     [RequireComponent(typeof(Collider))]
     public class InventoryItem : MonoBehaviour

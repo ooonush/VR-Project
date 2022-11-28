@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-namespace Gameplay
+namespace Gameplay.Teleportation
 {
     public class TeleportationTargetVisual : MonoBehaviour
     {

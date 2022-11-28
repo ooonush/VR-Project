@@ -1,9 +1,12 @@
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class CharacterMovementDriver : CharacterControllerDriver
+namespace Gameplay.GameplayObjects
 {
-    private void Update()
+    public class CharacterMovementDriver : CharacterControllerDriver
     {
-        UpdateCharacterController();
+        private void Update()
+        {
+            UpdateCharacterController();
+        }
     }
 }

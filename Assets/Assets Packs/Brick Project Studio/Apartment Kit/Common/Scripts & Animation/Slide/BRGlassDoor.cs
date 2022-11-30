@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace SojaExiles
+namespace Assets_Packs.Brick_Project_Studio.Apartment_Kit.Common.Scripts___Animation.Slide
 
 {
 	public class BRGlassDoor : MonoBehaviour

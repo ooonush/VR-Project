@@ -5,7 +5,7 @@ namespace Gameplay
 {
     public class XRInputAction
     {
-        public InputAction Action;
+        public readonly InputAction Action;
         public event Action OnPerformed;
         public event Action OnCanceled;
         public event Action OnStarted;
@@ -36,7 +36,7 @@ namespace Gameplay
     
     public class XRInputAction<T> where T : struct
     {
-        public InputAction Action;
+        public readonly InputAction Action;
         public event Action<T> OnPerformed;
         public event Action<T> OnCanceled;
         public event Action<T> OnStarted;

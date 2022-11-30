@@ -17,7 +17,7 @@ namespace Gameplay
         {
             _inputActions = new XRIDefaultInputActions();
             _inputActions.Enable();
-
+            
             XRIDefaultInputActions.XRILeftHandLocomotionActions leftHandLocomotion = _inputActions.XRILeftHandLocomotion;
             
             TeleportModeActivateAction = new XRInputAction<Vector2>(leftHandLocomotion.TeleportModeActivate);

@@ -10,7 +10,7 @@ namespace Gameplay
         public XRInputAction<float> ActivateActionValue { get; private set; }
         public XRInputAction SelectAction { get; private set; }
         public XRInputAction<float> SelectActionValue { get; private set; }
-
+        
         private void Awake()
         {
             ActivateAction = new XRInputAction(_controller.activateAction.action);

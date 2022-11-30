@@ -20,10 +20,10 @@ namespace Gameplay.Teleportation
         private void Start()
         {
             _rayInteractor.enabled = false;
-        
+            
             _input.TeleportModeActivateAction.OnPerformed += OnTeleportActivate;
             _input.TeleportModeCancelAction.OnPerformed += OnTeleportCancel;
-        
+            
             _leftHandMoveStick = _input.MoveAction.Action;
         }
 

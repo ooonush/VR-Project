@@ -65,7 +65,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LightAngle: 46
+    - _LightAngle: 21
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -79,6 +79,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightDirection: {r: 0.86505115, g: 0.13398619, b: -0.48346075, a: 0}
-    - _LightPosition: {r: -0.6779996, g: 1.948556, b: 0.25544035, a: 0}
+    - _LightDirection: {r: 0.6663206, g: -0.27060044, b: -0.69483256, a: 0}
+    - _LightPosition: {r: -0.56313336, g: 2.1824071, b: 0.37761325, a: 0}
   m_BuildTextureStacks: []

@@ -3,28 +3,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Gameplay
-{
-    public class DoorInteractable : XRBaseInteractable
-    {
-        private Vector3 _startPosition;
-        
-        protected override void OnSelectEntered(SelectEnterEventArgs args)
-        {
-            base.OnSelectEntered(args);
-
-            _startPosition = transform.position;
-        }
-
-        public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
-        {
-            base.ProcessInteractable(updatePhase);
-
-            IXRSelectInteractor interactor = interactorsSelecting[0];
-            Vector3 position = transform.position;
-        }
-    }
-    
-    
+{   
     public class XRInput : MonoBehaviour
     {
         public XRControllerInput RightHandControllerInput;
@@ -41,7 +20,7 @@ namespace Gameplay
             _inputActions = new XRIDefaultInputActions();
             
             XRIDefaultInputActions.XRILeftHandLocomotionActions leftHandLocomotion = _inputActions.XRILeftHandLocomotion;
-            
+
             TeleportModeActivateAction = new XRInputAction<Vector2>(leftHandLocomotion.TeleportModeActivate);
             TeleportModeCancelAction = new XRInputAction(leftHandLocomotion.TeleportModeCancel);
             MoveAction = new XRInputAction<Vector2>(leftHandLocomotion.Move);
@@ -57,6 +36,10 @@ namespace Gameplay
         private void Start()
         {
             _inputActions.Enable();
+            _inputActions.XRILeftHandLocomotion.Enable();
+            TeleportModeActivateAction.Action.Enable();
+            TeleportModeCancelAction.Action.Disable();
+            MoveAction.Action.Enable();
         }
     }
 }

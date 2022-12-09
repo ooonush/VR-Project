@@ -18,13 +18,5 @@ namespace Gameplay
             SelectAction = new XRInputAction(_controller.selectAction.action);
             SelectActionValue = new XRInputAction<float>(_controller.selectActionValue.action);
         }
-
-        private void Start()
-        {
-            ActivateAction.Action.Enable();
-            ActivateActionValue.Action.Enable();
-            SelectAction.Action.Enable();
-            SelectActionValue.Action.Enable();
-        }
     }
 }

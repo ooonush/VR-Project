@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4511342, g: 0.5009189, b: 0.5739298, a: 1}
+  m_IndirectSpecularColor: {r: 0.45113438, g: 0.50091946, b: 0.5739302, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4103,7 +4103,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7773584839740962858}
-  - {fileID: 7773584839993994471}
   - {fileID: 7773584838885723081}
   - {fileID: 7773584838813841423}
   - {fileID: 7773584839087998335}
@@ -4183,7 +4182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7773584838766699525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
   m_Name: 
@@ -4227,8 +4226,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7773584838766699640}
   - component: {fileID: 7773584838766699527}
-  - component: {fileID: 7773584838766699524}
   - component: {fileID: 7773584838766699643}
+  - component: {fileID: 7773584838766699524}
   - component: {fileID: 7773584838766699642}
   m_Layer: 0
   m_Name: Locomotion System
@@ -4525,7 +4524,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1092323885876264980}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7773584838813841424
 MonoBehaviour:
@@ -5038,11 +5037,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7773584838865761374}
+  - component: {fileID: 7773584838865761377}
   - component: {fileID: 7773584838865761362}
   - component: {fileID: 7773584838865761363}
   - component: {fileID: 7773584838865761360}
   - component: {fileID: 7773584838865761361}
-  - component: {fileID: 7773584838865761377}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -5076,7 +5075,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1092323885876264980}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7773584838885723090
 MonoBehaviour:
@@ -5694,7 +5693,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1092323885876264980}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7773584839087998336
 MonoBehaviour:
@@ -5785,7 +5784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7773584839731239205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55029273, y: 2.041, z: 1.7007933}
+  m_LocalPosition: {x: 0.55029273, y: 2.17, z: 1.7007933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5855,72 +5854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &7773584839993994470
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1092323885876264980}
-    m_Modifications:
-    - target: {fileID: 4949837510494428226, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-      propertyPath: m_Name
-      value: XR Device Simulator
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
---- !u!4 &7773584839993994471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
-  m_PrefabInstance: {fileID: 7773584839993994470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7773584840224529489
 Transform:
   m_ObjectHideFlags: 0
@@ -5964,10 +5897,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7773584840733975061}
+  - component: {fileID: 5974786897375620524}
   - component: {fileID: 7773584840733975062}
   - component: {fileID: 7773584840733975063}
   - component: {fileID: 7773584840733975060}
-  - component: {fileID: 5974786897375620524}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged

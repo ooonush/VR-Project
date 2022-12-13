@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestUV
+  m_Name: Onush
   m_Shader: {fileID: 4800000, guid: 820dbac78da3f3641a382596e89dce5b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -79,6 +79,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightDirection: {r: 0.6663206, g: -0.27060044, b: -0.69483256, a: 0}
-    - _LightPosition: {r: -0.56313336, g: 2.1824071, b: 0.37761325, a: 0}
+    - _LightDirection: {r: 0.9854994, g: -0.15988114, b: -0.05682382, a: 0}
+    - _LightPosition: {r: -0.7476187, g: 2.1184113, b: 0.008844186, a: 0}
   m_BuildTextureStacks: []

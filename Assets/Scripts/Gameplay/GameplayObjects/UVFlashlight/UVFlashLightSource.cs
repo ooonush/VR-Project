@@ -5,13 +5,16 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class UVFlashLightSource : MonoBehaviour
 {
-    [SerializeField] private Material _UVShader;
     [SerializeField] private Light _light;
-    
+    [SerializeField] private List<Material> _UVMaterials;
+
     void Update()
     {
-        _UVShader.SetVector("_LightPosition", _light.transform.position);
-        _UVShader.SetVector("_LightDirection", -_light.transform.forward);
-        _UVShader.SetFloat("_LightAngle", _light.spotAngle);
+        foreach (Material uvMaterial in _UVMaterials)
+        {
+            uvMaterial.SetVector("_LightPosition", _light.transform.position);
+            uvMaterial.SetVector("_LightDirection", -_light.transform.forward);
+            uvMaterial.SetFloat("_LightAngle", _light.spotAngle);
+        }
     }
 }

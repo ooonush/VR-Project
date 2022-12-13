@@ -1,7 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets_Packs.Brick_Project_Studio.Apartment_Kit.Common.Scripts___Animation.Z_Axis__1
+namespace SojaExiles
 
 {
 	public class Drawer_Pull_Zopp : MonoBehaviour

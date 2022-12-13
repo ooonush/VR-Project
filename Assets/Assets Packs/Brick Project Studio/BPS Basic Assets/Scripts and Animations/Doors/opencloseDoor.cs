@@ -1,7 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets_Packs.Brick_Project_Studio.BPS_Basic_Assets.Scripts_and_Animations.Doors
+namespace SojaExiles
 
 {
 	public class opencloseDoor : MonoBehaviour

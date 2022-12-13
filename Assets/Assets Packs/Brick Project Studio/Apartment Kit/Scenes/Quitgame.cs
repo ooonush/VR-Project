@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace SojaExiles
+namespace Assets_Packs.Brick_Project_Studio.Apartment_Kit.Scenes
 {
     public class Quitgame : MonoBehaviour
     {

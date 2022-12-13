@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace SojaExiles
+namespace Assets_Packs.Brick_Project_Studio.BPS_Basic_Assets.Scripts_and_Animations.First_Person_Player
 
 {
 

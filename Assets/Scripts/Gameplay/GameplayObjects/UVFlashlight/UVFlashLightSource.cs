@@ -7,8 +7,8 @@ public class UVFlashLightSource : MonoBehaviour
 {
     [SerializeField] private Light _light;
     [SerializeField] private List<Material> _UVMaterials;
-
-    void Update()
+    
+    private void Update()
     {
         foreach (Material uvMaterial in _UVMaterials)
         {
